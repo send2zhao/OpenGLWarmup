@@ -1,13 +1,16 @@
 import os
+import re
+from os.path import splitext
+
+# You need to install the following package
+# pip install requests zipfile
 import requests
 import zipfile
-import re
 
-from os.path import splitext
 
 DEST_FOLDER = 'repo'
 
-# dependes:
+# depends:
 # SDL2, glew, glm.
 
 # WINDOWS VERSION
@@ -50,5 +53,5 @@ def main():
 
 
 if __name__ == "__main__":
-    print('Current Version is worked for WINDOWS')
+    print('Current Version is working under Windows Visual Studio Environment.')
     main()
