@@ -41,7 +41,7 @@ def download_file(url, allow_redirects=True):
 def main():
     # main loop
     if (not os.path.exists(DEST_FOLDER)):
-        os.makedir(DEST_FOLDER)
+        os.makedirs(DEST_FOLDER)
 
     for url in urls:
         local_filename = download_file(url)

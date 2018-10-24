@@ -86,7 +86,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\repo\SDL2-2.0.7\include;$(ProjectDir)..\repo\glm-0.9.8.5;$(ProjectDir)..\repo\glew-2.1.0\include;$(ProjectDir)..\res\imgui;$(ProjectDir)..\res\stb_image</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\repo\glew-2.1.0\include;$(ProjectDir)..\repo\SDL2-2.0.7\include;$(ProjectDir)..\repo\glm-0.9.8.5;$(ProjectDir)..\res\imgui;$(ProjectDir)..\res\stb_image</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>GLEW_STATIC;IMGUI_IMPL_OPENGL_LOADER_GLEW;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -117,7 +117,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\repo\SDL2-2.0.7\include;$(ProjectDir)..\repo\glm-0.9.8.5;$(ProjectDir)..\repo\glew-2.1.0\include;$(ProjectDir)..\res\imgui;$(ProjectDir)..\res\stb_image</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\repo\glew-2.1.0\include;$(ProjectDir)..\repo\SDL2-2.0.7\include;$(ProjectDir)..\repo\glm-0.9.8.5;$(ProjectDir)..\res\imgui;$(ProjectDir)..\res\stb_image</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>GLEW_STATIC;IMGUI_IMPL_OPENGL_LOADER_GLEW;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>

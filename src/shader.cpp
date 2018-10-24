@@ -67,13 +67,34 @@ void Shader::Update(const Transform& transform, const Camera& camera, Texture& t
 	glUniform3f(m_uniforms[2], 0.0f, 0.0f, 1.0f);
 
 	// set up the sampler
-	glActiveTexture(GL_TEXTURE3);  // pick up the first texture buffer (use third)
-	glEnable(GL_TEXTURE_2D); // set to be 2D
-	texture.Bind(); // bind the actual data to the texture
+	//glActiveTexture(GL_TEXTURE3);  // pick up the first texture buffer (use third)
+	//glEnable(GL_TEXTURE_2D); // set to be 2D
+	texture.bind(3); // bind the actual data to the texture
 	glUniform1i(glGetUniformLocation(m_program, "sampler"), 3); // set to the shader, 3rd texture buffer
 
-
+	glDrawElementsBaseVertex(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0, 0);
 }
+
+void Shader::Update(const Transform& transform, const Camera& camera, std::vector<std::shared_ptr<Texture>>& textures)
+{
+	glm::mat4 MVP = transform.GetMVP(camera);
+	glm::mat4 Normal = transform.GetModel();
+
+	// set up the sampler
+	for (int i = 0; i < textures.size(); i++)
+	{
+		//glActiveTexture(GL_TEXTURE3);  // pick up the first texture buffer (use third)
+		//glEnable(GL_TEXTURE_2D); // set to be 2D
+		textures[i]->bind(3);
+		glUniformMatrix4fv(m_uniforms[0], 1, GL_FALSE, &MVP[0][0]);
+		glUniformMatrix4fv(m_uniforms[1], 1, GL_FALSE, &Normal[0][0]);
+		glUniform1i(glGetUniformLocation(m_program, "sampler"), 3); // set to the shader, 3rd texture buffer
+
+		// every four vetexes form a quad(face), so skip 4 each.
+		glDrawElementsBaseVertex(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0, 4 * i);
+	}
+}
+
 
 std::string Shader::LoadShader(const std::string& fileName)
 {

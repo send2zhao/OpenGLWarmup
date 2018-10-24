@@ -2,11 +2,16 @@ README
 ======
 2018.10.15
 
+
+---
+
+
 This projection started from `https://github.com/BennyQBD/ModernOpenGLTutorial`.
 
 
 OpenGL Test Project. Very simple code. Just to faimilar with basic concepts.
 
+---
 
 Dependencies
 ------------
@@ -27,10 +32,16 @@ Depends on following packages:
   inside `res` folder.
 
 
+---
+
 To install the dependencies. Run the `setup.py` script.
-```
+
+```bash
 python setup.py
+
 ```
+
+---
 
 Work Environments
 -----------------
@@ -39,3 +50,9 @@ First version of this toy project is on Ubuntu using CodeBlock. Later Visual Stu
 is used. Currently (2018-10-15), only the VS is working. Need to fix the CodeBlock
 environment.
 
+
+
+
+See:
+
+https://github.com/Headturna/OpenGL-C---Tutorials/blob/master/Primitives.h

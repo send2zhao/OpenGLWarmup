@@ -1,7 +1,7 @@
-#ifndef SHADER_INCLUDED_H
-#define SHADER_INCLUDED_H
+#pragma once
 
 #include <string>
+#include <vector>
 #include <GL/glew.h>
 #include "transform.h"
 #include "texture.h"
@@ -13,6 +13,7 @@ public:
 
 	void Bind();
 	void Update(const Transform& transform, const Camera& camera, Texture& texture);
+	void Update(const Transform& transform, const Camera& camera, std::vector<std::shared_ptr<Texture>>& textures);
 
 	virtual ~Shader();
 protected:
@@ -30,5 +31,3 @@ private:
 	GLuint m_shaders[NUM_SHADERS];
 	GLuint m_uniforms[NUM_UNIFORMS];
 };
-
-#endif

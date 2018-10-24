@@ -42,7 +42,8 @@ public:
 	Mesh(Vertex* vertices, unsigned int numVertices, unsigned int* indices, unsigned int numIndices);
 
 	void Draw();
-
+	inline void Bind() { glBindVertexArray(m_vertexArrayObject); }
+	inline void UnBind() { glBindVertexArray(0); }
 	virtual ~Mesh();
 protected:
 private:
