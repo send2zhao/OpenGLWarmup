@@ -43,7 +43,7 @@ python setup.py
 
 ---
 
-Work Environments
+Working Environment
 -----------------
 
 First version of this toy project is on Ubuntu using CodeBlock. Later Visual Studio
